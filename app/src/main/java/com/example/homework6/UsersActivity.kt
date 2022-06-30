@@ -3,7 +3,6 @@ package com.example.homework6
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.homework6.databinding.ActivityMainBinding
 import com.example.homework6.databinding.ActivityUsersBinding
 
 class UsersActivity: AppCompatActivity() {
@@ -25,6 +24,7 @@ class UsersActivity: AppCompatActivity() {
         }
     }
     private fun onNextClicked(){
+        if(usersArray.size == 0) return
         if(count == usersArray.size - 1)
             count = 0
         else count++
